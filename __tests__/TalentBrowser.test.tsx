@@ -1,9 +1,27 @@
+import { render } from "@testing-library/react";
+import { describe, it, expect, vi } from "vitest";
+import TalentBrowser from "../components/TalentBrowser";
 
-import { render, screen } from '@testing-library/react';
-import TalentBrowser from '../components/TalentBrowser';
+// fake fetching fnx
+global.fetch = vi.fn(() =>
+  Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve([]),
+  })
+) as never;
 
-test('renders talent browser', () => {
-  render(<TalentBrowser />);
-  const heading = screen.getByText(/Talent Browser/i);
-  expect(heading).toBeInTheDocument();
+describe("TalentBrowser", () => {
+  it("renders talent browser with search input", () => {
+    const { getByPlaceholderText } = render(<TalentBrowser />);
+
+    expect(
+      getByPlaceholderText(/Search by name or skills/i)
+    ).toBeInTheDocument();
+  });
+
+  it("shows loading spinner initially", () => {
+    const { container } = render(<TalentBrowser />);
+
+    expect(container.querySelector(".animate-spin")).toBeInTheDocument();
+  });
 });
