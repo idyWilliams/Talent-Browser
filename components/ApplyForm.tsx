@@ -67,7 +67,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
 
-    // Clear error when user starts typing
+
     if (errors[name as keyof ApplyFormData]) {
       setErrors((prev) => ({ ...prev, [name]: undefined }));
     }
@@ -80,7 +80,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
 
     setIsSubmitting(true);
 
-    // Simulate API call
+
     setTimeout(() => {
       console.log("Application submitted:", {
         talent: talent.name,
@@ -98,7 +98,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50 py-8 px-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header Section */}
+
         <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg mb-8">
           <button
             onClick={onBack}
@@ -175,7 +175,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
           </div>
         </div>
 
-        {/* Form Section */}
+
         <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-lg">
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
@@ -188,7 +188,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Personal Information */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -267,7 +267,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
               </div>
             </div>
 
-            {/* Project Details */}
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <label
@@ -382,7 +382,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
               </div>
             </div>
 
-            {/* Project Description */}
+
             <div>
               <label
                 htmlFor="message"
@@ -426,7 +426,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
               )}
             </div>
 
-            {/* Submit Button */}
+
             <div className="flex gap-4 pt-6">
               <button
                 type="button"
@@ -480,7 +480,7 @@ export default function ApplyForm({ talent, onBack }: ApplyFormProps) {
           </form>
         </div>
 
-        {/* Additional Info */}
+
         <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg mt-8">
           <div className="flex items-start gap-4">
             <div className="flex-shrink-0">

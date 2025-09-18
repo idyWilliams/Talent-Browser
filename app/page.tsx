@@ -4,33 +4,33 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-cyan-50">
-      {/* Background decoration */}
+
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-200 rounded-full opacity-20 animate-pulse"></div>
         <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-blue-200 rounded-full opacity-20 animate-pulse delay-1000"></div>
       </div>
 
-      {/* Main content */}
+
       <div className="relative flex flex-col items-center justify-center min-h-screen px-6">
-        {/* Hero section */}
+
         <div className="text-center max-w-4xl mx-auto">
-          {/* Badge */}
+
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-6 animate-fade-in">
             ✨ Discover Amazing Talent
           </div>
 
-          {/* Main heading */}
+
           <h1 className="text-6xl md:text-7xl font-extrabold bg-gradient-to-r from-indigo-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6 leading-tight animate-fade-in-up">
             Talent Browser
           </h1>
 
-          {/* Subheading */}
+
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200">
             Connect with extraordinary professionals and discover the perfect
             match for your next project
           </p>
 
-          {/* CTA Button */}
+
           <Link
             href="/talents"
             className="group inline-flex items-center gap-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 animate-fade-in-up delay-400"
@@ -51,7 +51,7 @@ export default function HomePage() {
             </svg>
           </Link>
 
-          {/* Secondary action */}
+
           <div className="mt-8 animate-fade-in-up delay-500">
             <Link
               href="/about"
@@ -62,7 +62,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Feature highlights */}
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 max-w-4xl mx-auto animate-fade-in-up delay-700">
           <div className="text-center p-6 rounded-2xl bg-white/50 backdrop-blur-sm border border-white/20 hover:bg-white/70 transition-all duration-300">
             <div className="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mx-auto mb-4">
